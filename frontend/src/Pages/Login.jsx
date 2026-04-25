@@ -16,7 +16,7 @@ function Login() {
         e.preventDefault();
         const admin ={email,password}
         // console.log(admin);
-      const res= await axios.post('http://localhost:5000/api/admin/log',admin);
+      const res= await axios.post('https://crm-mng0.onrender.com/api/admin/log',admin);
   
       // console.log(res);
             if(res.data.msg=="success"){
@@ -46,7 +46,7 @@ function Login() {
     }
 
   const getparams= async ()=>{
-    const res =await axios.get(`http://localhost:5000/api/admin/stats/${params}`)
+    const res =await axios.get(`https://crm-mng0.onrender.com/api/admin/stats/${params}`)
     console.log(res);
   }
 
